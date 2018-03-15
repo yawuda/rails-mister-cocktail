@@ -1,1 +1,6 @@
 <h1>Here to create a cocktail</h1>
+
+<%= simple_form_for @cocktail do |a| %>
+<%= a.input :name %>
+<%= a.button :submit, class: 'btn btn-warning' %>
+<% end  %>

@@ -1,3 +1,13 @@
-<h1>Here is your cockatil list</h1>
+<h1 class="title"> Here is your cockatil list</h1>
 
-<%= @cocktails %>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+        <li>
+        <%= link_to cocktail_path(cocktail) do%>
+          <%= cocktail.name %>
+        <% end %>
+        </li>
+        <% end %>
+      </ul>
+
+  <%= link_to 'New cockatil', new_cocktail_path %>
