@@ -5,12 +5,6 @@ class DosesController < ApplicationController
     @dose = Dose.new
   end
 
-  def show
-  end
-
-  def edit
-  end
-
   def create
     @dose = Dose.new(doses_params)
     @dose.cocktail = @cocktail
@@ -20,9 +14,6 @@ class DosesController < ApplicationController
     else
       render :new
     end
-  end
-
-  def update
   end
 
   def destroy
